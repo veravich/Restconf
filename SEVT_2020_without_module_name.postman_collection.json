@@ -1,0 +1,2502 @@
+{
+	"info": {
+		"_postman_id": "6d240c08-dae0-48db-bf19-8be187a387e5",
+		"name": "SEVT_2020_without_module_name",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "GET Root Element",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/.well-known/host-meta",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								".well-known",
+								"host-meta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Module Names",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/modules-state",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"modules-state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Modules within a Device",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/modules-state",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"devices",
+								"device=ce0",
+								"config",
+								"modules-state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESTCONF Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								""
+							]
+						},
+						"description": "Status of RESTCONF API"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Monitoring Streams",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/restconf-state",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"restconf-state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET FULL DATASTORE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Device_Management",
+			"item": [
+				{
+					"name": "View Device Details",
+					"item": [
+						{
+							"name": "GET - Single Device Config",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Show Interfaces",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/interface/",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"interface",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Show Interface Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/interface/GigabitEthernet=0%2F8.88",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"interface",
+										"GigabitEthernet=0%2F8.88"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Devices: Show Running-config Devices Device",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/yang-data+json"
+									}
+								],
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device?content=config",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device"
+									],
+									"query": [
+										{
+											"key": "content",
+											"value": "config"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Adding / Removing a Device",
+					"item": [
+						{
+							"name": "Create a Device in the CDB",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/yang-data+xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t\t\t\t<device>\n                 <name>sevt-ios0</name>\n                 <address>127.0.0.1</address>\n                 <port>10022</port>\n                 <authgroup>default</authgroup>\n                 <device-type>\n                   <cli>\n                     <ned-id xmlns:cisco-ios-cli-3.8=\"http://tail-f.com/ns/ned-id/cisco-ios-cli-3.8\">cisco-ios-cli-3.8:cisco-ios-cli-3.8</ned-id>\n                   </cli>\n                 </device-type>\n                 <state>\n                   <admin-state>unlocked</admin-state>\n                 </state>\n               </device>"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a device from CDB Device List",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=sevt-ios0",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=sevt-ios0"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Change Device Config",
+					"item": [
+						{
+							"name": "add ip address to interface",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/yang-data+xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n                       <ip>\n                         <address>\n                           <primary>\n                             <address>20.0.0.7</address>\n                             <mask>255.255.255.255</mask>\n                           </primary>\n                         </address>\n                       </ip>\n"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/interface/GigabitEthernet=0%2F11/ip",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"interface",
+										"GigabitEthernet=0%2F11",
+										"ip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove IP Address From Interface",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/yang-data+xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/interface/GigabitEthernet=0%2F11/ip/address",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"interface",
+										"GigabitEthernet=0%2F11",
+										"ip",
+										"address"
+									],
+									"query": [
+										{
+											"key": "dry-run",
+											"value": "native",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add SNMP Community String",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/yang-data+xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "                 <config>\n                   <snmp-server xmlns=\"urn:ios\">\n                     <community>\n                       <name>NSO-STRING</name>\n                       <RW/>\n                     </community>\n                   </snmp-server>\n                 </config>"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										""
+									],
+									"query": [
+										{
+											"key": "dry-run",
+											"value": "native",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Snmp-server Config",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/snmp-server",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"snmp-server"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove SNMP Community String from Device",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/yang-data+xml"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/yang-data+xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/snmp-server",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"snmp-server"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Device Config Templates",
+					"item": [
+						{
+							"name": "1. Create a DNS Server Configuration Template",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a16f5541-96f9-474f-a659-9f53bbcac63c",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+xml"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman."
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n<devices xmlns=\"http://tail-f.com/ns/ncs\">\n               <template>\n                 <name>DNS_Server_Template_Junos_IOS</name>\n                 <ned-id>\n                   <id xmlns:juniper-junos-nc-3.0=\"http://tail-f.com/ns/ned-id/juniper-junos-nc-3.0\">juniper-junos-nc-3.0:juniper-junos-nc-3.0</id>\n                \t<config>\n                \t\t<configuration xmlns=\"http://xml.juniper.net/xnm/1.1/xnm\">\n                    \t\t<system>\n                    \t\t\t<name-server>\n                        \t\t\t<name>8.8.8.8</name>\n                    \t\t\t</name-server>\n                    \t\t</system>\n                \t\t</configuration>\n                \t</config>\n                 </ned-id>\n                 <ned-id>\n                   <id xmlns:cisco-ios-cli-3.8=\"http://tail-f.com/ns/ned-id/cisco-ios-cli-3.8\">cisco-ios-cli-3.8:cisco-ios-cli-3.8</id>\n                   <config>\n                     <ip xmlns=\"urn:ios\">\n                       <name-server>\n                         <name-server-list>\n                           <address>8.8.8.8</address>\n                         </name-server-list>\n                       </name-server>\n                     </ip>\n                   </config>\n                 </ned-id>\n               </template>\n             </devices>"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										""
+									]
+								},
+								"description": "sample CLI to do the same:\ndevices template Standard_DNS_Servers\nned-id cisco-ios-cli-6.42\nconfi\nip name-server name-server-list 8.8.8.8\nexit\nexit\nexit\nned-id cisco-nx-cli-5.13 config\nip name-server servers 8.8.8.8"
+							},
+							"response": []
+						},
+						{
+							"name": "2. Apply DNS Server Device Template",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6cecb903-a8b2-4b40-b632-bd2526083f3a",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+xml"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<!--\ncli for same config\nconf\ndevices device ce0 apply-template template-name DNS_Server_Template_Junos_IOS\n-->\n\n<input>\n\t<template-name>DNS_Server_Template_Junos_IOS</template-name>\n</input>\n\n"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/apply-template",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"apply-template"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - View DNS-server Config",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/ip/name-server",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device=ce0",
+										"config",
+										"ip",
+										"name-server"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "NSO Device Groups",
+					"item": [
+						{
+							"name": "POST  Create Device Groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4c2455f-5e7b-4dab-afa2-19781c5dd9d0",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"device-group\":  [ \n    \t{\n        \"name\": \"ce-group\",\n        \"device-name\": [ \"ce0\", \"ce1\" ]\n    \t},\n\t\t{\n        \"name\": \"pe-group\",\n        \"device-name\": [ \"pe0\", \"pe1\" ]\n    \t} ]\n}"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Create Device Groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "dce22a39-f0da-40b6-9df1-cc643a868dda",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"device-group\":  [ \n    \t{\n        \"name\": \"ce-group\",\n        \"device-name\": [ \"ce0\", \"ce1\" ]\n    \t} \n    \t]\n}\n"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device-group=ce-group",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device-group=ce-group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH Create or Modify Device Groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7cebaf53-f1e7-48db-9656-4207c67b766c",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"devices\": {\n    \"device-group\":  [ \n    \t{\n        \"name\": \"ce-group\",\n        \"device-name\": [ \"ce0\", \"ce1\" ]\n    \t},\n\t\t{\n        \"name\": \"pe-group\",\n        \"device-name\": [ \"pe0\", \"pe1\" ]\n    \t} ]\n    }\n}"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices"
+									]
+								},
+								"description": "Groups are useful for organizing your devices in a way\nthat makes sense to you.\n\nDevices can be a member of more than one group,\nand device groups can be nested.\n\nCLI Equivalent\n\ndevices device-group campus-devices device-name [ ios0 nx0 ]\ntop\ndevices device-group backbone-devices device-name [ iosxr0 asa0 ]\ntop\ndevices device-group parent-group-all-devices device-group [ campus-devices backbone-devices ]\ncommit dry-run\ncommit dry-run outformat xml\ntop"
+							},
+							"response": []
+						},
+						{
+							"name": "List All Device Groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6abcfb82-3373-495e-b2a5-3b67964f98a8",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+json"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device-group",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device-group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Single Device Group Details",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "17e47bea-5412-4ede-bb66-348fcd47cb61",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman."
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/devices/device-group=ce-group",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"devices",
+										"device-group=ce-group"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Config Compliance Reporting",
+					"item": [
+						{
+							"name": "Configure DNS Server Compliance Report",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8b676e6b-2721-4f47-a0c4-6ba0cf743af0",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+xml"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<compliance xmlns=\"http://tail-f.com/ns/ncs\">\n               <reports>\n                 <report>\n                   <name>DNS_Servers_Configured</name>\n                   <compare-template>\n                     <template-name>DNS_Server_Template_Junos_IOS</template-name>\n                     <device-group>pe-group</device-group>\n                   </compare-template>\n                 </report>\n               </reports>\n             </compliance>"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/compliance",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"compliance"
+									]
+								},
+								"description": "This compliance report uses the device config template Standard_DNS_Servers to see if the device has a DNS server of 8.8.8.8, only for IOS devices. If non-IOS devices are applied, they are ignored. "
+							},
+							"response": []
+						},
+						{
+							"name": "Run Compliance Report",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "434b3f68-2cbd-4add-bbc5-5db66a704dea",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yang-data+xml"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Basic YWRtaW46YWRtaW4="
+									},
+									{
+										"key": "Accept",
+										"value": "application/yang-data+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<input>\n\t<outformat>html</outformat>\n</input>"
+								},
+								"url": {
+									"raw": "http://{{server}}:{{port}}/restconf/data/compliance/reports/report=DNS_Servers_Configured/run",
+									"protocol": "http",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"restconf",
+										"data",
+										"compliance",
+										"reports",
+										"report=DNS_Servers_Configured",
+										"run"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Service_Management",
+			"item": [
+				{
+					"name": "GET - MPLS - Topology",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/topology",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"topology"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - VPN - L3VPN instances with depth",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - VPN - List L3VPN endpoints for a given VPN service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/endpoint",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"endpoint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - VPN - Dry-Run.  Add L3VPN endpoint to VPN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"l3vpn:endpoint\": {\n    \"id\": \"branch2\",\n    \"ce-device\": \"ce1\",\n    \"ce-interface\": \"GigabitEthernet0/1\",\n    \"ip-network\": \"10.1.0.0/24\",\n    \"bandwidth\": 1500,\n    \"as-number\": 65001\n  }\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank?dryrun=native",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank"
+							],
+							"query": [
+								{
+									"key": "dryrun",
+									"value": "native"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - VPN - Add L3VPN endpoint to VPN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"l3vpn:endpoint\": {\n    \"id\": \"branch2\",\n    \"ce-device\": \"ce1\",\n    \"ce-interface\": \"GigabitEthernet0/1\",\n    \"ip-network\": \"10.1.0.0/24\",\n    \"bandwidth\": 1500,\n    \"as-number\": 65001\n  }\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - VPN - L3VPN replacing endpoint data with new information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"l3vpn:endpoint\": {\n    \"id\": \"branch2\",\n    \"ce-device\": \"ce2\",\n    \"ce-interface\": \"GigabitEthernet0/1\",\n    \"ip-network\": \"12.1.0.0/24\",\n    \"bandwidth\": 1500,\n    \"as-number\": 65001\n  }\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/endpoint=branch2",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"endpoint=branch2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH - VPN - L3VPN modifying BW for a site: PATCH method",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"l3vpn:endpoint\": {\n\t\"bandwidth\": 64000\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/endpoint=hq",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"endpoint=hq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - VPN - L3VPN modifying BW for a site. PUT method.",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bandwidth\": 1500\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/endpoint=branch1/bandwidth",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"endpoint=branch1",
+								"bandwidth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - OPERATION - VPN - Check L3VPN \"check-sync\"",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/check-sync",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"check-sync"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - VPN - L3VPN endpoint",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/endpoint=branch2",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"endpoint=branch2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Rollback Files",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/rollback-files/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"rollback-files",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - Apply Rollback File=0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+xml"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<id>0</id>"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/rollback-files/apply-rollback-file",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"rollback-files",
+								"apply-rollback-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Compliance Reports",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/compliance/report-results/report",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"compliance",
+								"report-results",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Options Examples",
+			"item": [
+				{
+					"name": "GET - VPN - L3VPN endpoints for an VPN instance with FIELDS option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/vpn/l3vpn=abc-bank/endpoint?fields=id;bandwidth",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"vpn",
+								"l3vpn=abc-bank",
+								"endpoint"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "id;bandwidth"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Single Device Config CONTENT option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=pe0?content=nonconfig",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"devices",
+								"device=pe0"
+							],
+							"query": [
+								{
+									"key": "content",
+									"value": "nonconfig"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - VPN - L3VPN instances with DEPTH option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/l3vpn:vpn?depth=2",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"l3vpn:vpn"
+							],
+							"query": [
+								{
+									"key": "depth",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Commit Dry-run outformat native",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/yang-data+xml"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n                       <ip>\n                         <address>\n                           <primary>\n                             <address>10.0.2.5</address>\n                             <mask>255.255.255.252</mask>\n                           </primary>\n                         </address>\n                       </ip>\n"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/interface/GigabitEthernet=0%2F12/ip?dry-run=native",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"devices",
+								"device=ce0",
+								"config",
+								"interface",
+								"GigabitEthernet=0%2F12",
+								"ip"
+							],
+							"query": [
+								{
+									"key": "dry-run",
+									"value": "native"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dry Run Reverse: Getting back to current state if commit success",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/yang-data+xml"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n                       <ip>\n                         <address>\n                           <primary>\n                             <address>10.0.2.5</address>\n                             <mask>255.255.255.252</mask>\n                           </primary>\n                         </address>\n                       </ip>\n"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce0/config/interface/GigabitEthernet=0%2F12/ip?dry-run-reverse=native&dry-run=native",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"devices",
+								"device=ce0",
+								"config",
+								"interface",
+								"GigabitEthernet=0%2F12",
+								"ip"
+							],
+							"query": [
+								{
+									"key": "dry-run-reverse",
+									"value": "native"
+								},
+								{
+									"key": "dry-run",
+									"value": "native"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Actions and RPC Operation",
+			"item": [
+				{
+					"name": "SSH Fetch-Host-Keys Device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=pe0/ssh/fetch-host-keys",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"devices",
+								"device=pe0",
+								"ssh",
+								"fetch-host-keys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync-from Device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/devices/device=ce1/sync-from",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"devices",
+								"device=ce1",
+								"sync-from"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESTCONF Operations Query",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/operations",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"operations"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jukebox",
+			"item": [
+				{
+					"name": "GET Jukebox All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/jukebox/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"jukebox",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Jukebox Create Album under Artist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   { \n        \"album\":\n        [\n           {\n              \"name\": \"Album2.1\",\n              \"genre\": \"jukebox:pop\",\n              \"year\": 1999,\n              \"admin\": {\n                \"label\": \"song21\",\n                \"catalogue-number\": \"c21\"\n              },\n              \"song\": [\n                {\n                  \"name\": \"21\",\n                  \"location\": \"USA\",\n                  \"format\": \"CD\",\n                  \"length\": 3\n                },\n                {\n                  \"name\": \"22\",\n                  \"location\": \"Europe\",\n                  \"format\": \"cd\",\n                  \"length\": 4\n                }\n              ]\n           }\n       ] \n    }"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/jukebox/library/artist=Artist2",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"jukebox",
+								"library",
+								"artist=Artist2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Jukebox Specific Fields using FIELDS Option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/data/jukebox/library/artist=Artist1/album=Album1.1?fields=admin/label;admin/catalogue-number",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"data",
+								"jukebox",
+								"library",
+								"artist=Artist1",
+								"album=Album1.1"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "admin/label;admin/catalogue-number"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Jukebox Action = Play (Operation Example)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "ipaddr",
+								"value": "127.0.0.1"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4="
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"jukebox:input\" : {\n\t\t\"playlist\" : \"PlayList1\",\n\t\t\"song-number\" : 2 }\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/restconf/operations/jukebox:play",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restconf",
+								"operations",
+								"jukebox:play"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2cf920f6-d2e8-469e-bbdd-ffdcaf534665",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5c993416-d1bd-42bd-af09-1380057ee85a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
